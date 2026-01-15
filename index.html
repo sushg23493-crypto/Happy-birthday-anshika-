@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Anshika 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+  background:linear-gradient(135deg,#1a002b,#3b004f,#ff5e78);
+}
+.slider{
+  display:flex;
+  height:100vh;
+  transition:transform 1.5s cubic-bezier(0.77, 0, 0.175, 1); /* Smooth & slow page-like transition */
+}
+.slide{
+  min-width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:25px;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  text-shadow:0 0 25px rgba(255,255,255,0.7);
+}
+p{
+  font-size:18px;
+  max-width:650px;
+  margin-top:15px;
+  color:#ffe6ee;
+}
+.photo{
+  width:45%;
+  max-width:200px;
+  margin:8px;
+  border-radius:24px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  animation:zoom 6s infinite;
+}
+@keyframes zoom{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+.photo-row{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:15px;
+}
+.quote{
+  margin-top:18px;
+  font-style:italic;
+  text-shadow:0 0 15px #ff7a91;
+}
+.letter{
+  background:url("photo7.jpg") center/cover no-repeat;
+  background-size:cover;
+}
+.letter-box{
+  background:rgba(0,0,0,0.65);
+  padding:28px;
+  border-radius:22px;
+  box-shadow:0 0 50px rgba(255,94,120,0.8);
+}
+.end{
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd166);
+}
+.end h1{
+  animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+  from{text-shadow:0 0 15px #fff;}
+  to{text-shadow:0 0 35px #fff;}
+}
+
+/* HEART RAIN */
+.heart{
+  position:absolute;
+  top:-20px;
+  color:#ff4d6d;
+  font-size:20px;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(120vh);opacity:0;}
+}
+
+/* Welcome Slide Specific */
+.welcome-slide{
+  background:linear-gradient(135deg,#ffafbd,#ffc3a0);
+  color:#fff;
+}
+.welcome-slide h1{
+  font-size:42px;
+  text-shadow:0 0 20px #fff;
+}
+.welcome-slide p{
+  font-size:22px;
+  color:#fff;
+  margin-top:15px;
+  animation:blink 1.2s infinite;
+}
+@keyframes blink{
+  0%, 50%, 100% {opacity:1;}
+  25%, 75% {opacity:0.3;}
+}
+</style>
+</head>
+
+<body>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slider" id="slider">
+
+  <!-- Welcome Slide -->
+  <div class="slide welcome-slide" id="welcomeSlide">
+    <h1>Welcome 🎉</h1>
+    <p>Tap to enjoy music 🎵</p>
+  </div>
+
+  <!-- First Slide - Romantic GIF -->
+  <div class="slide">
+    <h1>Happy Birthday Anshika 🎂</h1>
+    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" width="230" style="border-radius:20px">
+    <p>Swipe slowly 👉 and feel the magic ✨</p>
+  </div>
+
+  <!-- Memories Slide 1 - 2 Photos -->
+  <div class="slide">
+    <div class="photo-row">
+      <img src="photo1.jpg" class="photo">
+      <img src="photo2.jpg" class="photo">
+    </div>
+    <p class="quote">“Some people quietly make life more beautiful — you are one of them.”</p>
+  </div>
+
+  <!-- Memories Slide 2 - 2 Photos -->
+  <div class="slide">
+    <div class="photo-row">
+      <img src="photo3.jpg" class="photo">
+      <img src="photo4.jpg" class="photo">
+    </div>
+    <p class="quote">“Your smile doesn’t try to impress, it simply stays.”</p>
+  </div>
+
+  <!-- Memories Slide 3 - 3 Photos -->
+  <div class="slide">
+    <div class="photo-row">
+      <img src="photo5.jpg" class="photo">
+      <img src="photo6.jpg" class="photo">
+      <img src="photo1.jpg" class="photo">
+    </div>
+    <p class="quote">“With you, even simple moments feel special.”</p>
+  </div>
+
+  <!-- Romantic Letter Slide -->
+  <div class="slide letter">
+    <div class="letter-box">
+      <h1>Dear Anshika 💌</h1>
+      <p>
+        There is something very peaceful about you.  
+        The way you smile, the way you exist — it feels warm and real.  
+        <br><br>
+        On your birthday, I just want you to know that  
+        you are appreciated more than you realize,  
+        and you deserve happiness that stays.  
+        <br><br>
+        Happy Birthday ✨
+      </p>
+    </div>
+  </div>
+
+  <!-- End Slide - Romantic GIF -->
+  <div class="slide end">
+    <h1>Happy Birthday Anshika 🎊</h1>
+    <p>With all my heart ❤️<br><b>— Om</b></p>
+    <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="220" style="border-radius:20px">
+  </div>
+
+</div>
+
+<!-- Heart Rain -->
+<div id="hearts"></div>
+
+<script>
+/* SLIDE SWIPE LOGIC */
+let index = 0;
+let slider = document.getElementById("slider");
+let startX = 0;
+
+document.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+document.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50 && index < slider.children.length - 1) { index++; update(); }
+  if (endX - startX > 50 && index > 0) { index--; update(); }
+});
+function update() {
+  slider.style.transform = `translateX(-${index * 100}vw)`;
+}
+
+/* HEART RAIN */
+setInterval(() => {
+  let h = document.createElement("span");
+  h.className = "heart";
+  h.innerHTML = "❤️";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = (14 + Math.random() * 18) + "px";
+  h.style.animationDuration = (4 + Math.random() * 4) + "s";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 8000);
+}, 250);
+
+/* PLAY MUSIC LOGIC */
+let music = document.getElementById("bgMusic");
+let welcomeSlide = document.getElementById("welcomeSlide");
+
+// Play music on first tap of welcome slide
+welcomeSlide.addEventListener("click", () => {
+  music.play().catch(() => {});
+});
+
+// Extra attempt to auto-play if browser allows
+document.addEventListener("DOMContentLoaded", () => {
+  music.play().catch(() => {});
+  setTimeout(() => music.play().catch(() => {}), 1000);
+});
+</script>
+
+</body>
+  </html>
